@@ -1,0 +1,75 @@
+.dashboard {
+  margin-top: 2rem;;
+    .sidebar {
+      .about, .teams, .overview {
+        h3 {
+          margin-bottom: 1rem;
+          color: #333;
+          font-size: 1.2rem;
+        }
+  
+        p {
+          margin: 0.5rem 0;
+          font-size: 0.9rem;
+          color: #666;
+        }
+      }
+      
+    }
+  
+    .main-content {
+      .activity-timeline, .connection-teams, .project-list {
+        h3 {
+          margin-bottom: 1rem;
+          color: #333;
+          font-size: 1.2rem;
+        }
+  
+        .connection-teams {
+          display: flex;
+  
+          .connection, .teams-list {
+            padding: 1rem;
+  
+            p {
+              margin: 0.5rem 0;
+              font-size: 0.9rem;
+              color: #666;
+            }
+          }
+        }
+  
+        .project-list {
+          .project-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem 0;
+            border-bottom: 1px solid #ddd;
+  
+            &:last-child {
+              border-bottom: none;
+            }
+  
+            .project-info {
+              flex: 1;
+              display: flex;
+              align-items: center;
+              gap: 1rem;
+  
+              img {
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+              }
+            }
+  
+            .project-status {
+              flex: 0 0 60px;
+              text-align: right;
+            }
+          }
+        }
+      }
+    }
+  }
+  
