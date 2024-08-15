@@ -7,7 +7,8 @@
         <p><strong>Full Name:</strong> John Doe</p>
         <p><strong>Status:</strong> Active</p>
         <p><strong>Role:</strong> Developer</p>
-        <!-- Más detalles -->
+        <p><strong>Country:</strong> COL</p>
+        <p><strong>Language:</strong> English</p>
       </div>
       <div class="teams">
         <h3>Teams</h3>
@@ -25,17 +26,162 @@
     </div>
     <div class="main-content">
       <div class="activity-timeline">
-        <h3>Activity Timeline</h3>
-        <!-- Actividades recientes -->
+        <h3 class="info">Activity Timeline</h3>
+        <h4 class="info">12 Invoices have been paid</h4>
+        <p class="info">invoces have been paid to the company</p>
+        <div class="invoice info">Invoice.pdf</div>
+        <hr />
+        <h4 class="info">Cliente meeting</h4>
+        <p class="info">Project meeting with Jonh 10:15am</p>
+        <div class="info">
+          <div class="info-meeting">
+            <img
+              src="../assets/images/perfil.jpg"
+              alt=""
+              width="50px"
+              height="50px"
+            />
+            <div class="info-client">
+              <p>Lester McCarty (Client)</p>
+              <div>CEO of Riwi</div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="connection-teams">
         <div class="connection">
           <h3>Connection</h3>
-          <!-- Lista de conexiones -->
+          <div class="info-conection">
+            <img
+              src="../assets/images/man.jpg"
+              alt=""
+              width="30px"
+              height="30px"
+            />
+            <div class="info-client">
+              <p>Cecilia Payne</p>
+              <div>45 connections</div>
+            </div>
+          </div>
+
+          <div class="info-conection">
+            <img
+              src="../assets/images/perfil.jpg"
+              alt=""
+              width="30px"
+              height="30px"
+            />
+            <div class="info-client">
+              <p>Curtis McCarty</p>
+              <div>45k connections</div>
+            </div>
+          </div>
+
+          <div class="info-conection">
+            <img
+              src="../assets/images/man.jpg"
+              alt=""
+              width="30px"
+              height="30px"
+            />
+            <div class="info-client">
+              <p>Alice Stone</p>
+              <div>125 connections</div>
+            </div>
+          </div>
+
+          <div class="info-conection">
+            <img
+              src="../assets/images/perfil.jpg"
+              alt=""
+              width="30px"
+              height="30px"
+            />
+            <div class="info-client">
+              <p>Eugenia Moore</p>
+              <div>1.2k connections</div>
+            </div>
+          </div>
+
+          <div class="info-conection">
+            <img
+              src="../assets/images/man.jpg"
+              alt=""
+              width="30px"
+              height="30px"
+            />
+            <div class="info-client">
+              <p>Lester McCarty (Client)</p>
+              <div>CEO of Riwi</div>
+            </div>
+          </div>
         </div>
         <div class="teams-list">
           <h3>Teams</h3>
-          <!-- Lista de equipos -->
+          <div class="info-conection">
+            <img
+              src="../assets/images/React.png"
+              alt=""
+              width="30px"
+              height="30px"
+            />
+            <div class="info-client">
+              <p>React Developers</p>
+              <div>72 members</div>
+            </div>
+          </div>
+
+          <div class="info-conection">
+            <img
+              src="../assets/images/support.png"
+              alt=""
+              width="30px"
+              height="30px"
+            />
+            <div class="info-client">
+              <p>Support team</p>
+              <div>122 members</div>
+            </div>
+          </div>
+
+          <div class="info-conection">
+            <img
+              src="../assets/images/Figma.png"
+              alt=""
+              width="30px"
+              height="30px"
+            />
+            <div class="info-client">
+              <p>IU Designer</p>
+              <div>7 members</div>
+            </div>
+          </div>
+
+          <div class="info-conection">
+            <img
+              src="../assets/images/vue.png"
+              alt=""
+              width="30px"
+              height="30px"
+            />
+            <div class="info-client">
+              <p>Vue.js Developers</p>
+              <div>289 members</div>
+            </div>
+          </div>
+
+          <div class="info-conection">
+            <img
+              src="../assets/images/x.png"
+              alt=""
+              width="30px"
+              height="30px"
+            />
+            <div class="info-client">
+              <p>Digital Marketing</p>
+              <div>24 members</div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="project-list">
@@ -47,51 +193,4 @@
 
 <script setup lang="ts"></script>
 
-<style lang="scss" scoped>
-.dashboard {
-  display: flex;
-  gap: 2rem;
-
-  .sidebar {
-    width: 20%;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-
-    .about,
-    .teams,
-    .overview {
-      background-color: #fff;
-      padding: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-  }
-
-  .main-content {
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-
-    .activity-timeline,
-    .connection-teams,
-    .project-list {
-      background-color: #fff;
-      padding: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .connection-teams {
-      display: flex;
-      gap: 2rem;
-
-      .connection,
-      .teams-list {
-        flex: 1;
-      }
-    }
-  }
-}
-</style>
+<style lang="scss" scoped></style>

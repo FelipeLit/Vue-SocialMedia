@@ -1,0 +1,83 @@
+.dashboard-team {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  
+    .content {
+      flex: 1 1 calc(33.333% - 1rem); /* Ajuste para que haya tres tarjetas por fila */
+      padding: 1.5rem;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+      .team-name {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+  
+        h4 {
+          margin: 0;
+        }
+  
+        .star-icon {
+          width: 20px;
+          height: 20px;
+        }
+      }
+  
+      .team-description {
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        margin-top: 15px;
+      }
+  
+      .team-members {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+  
+        .members-icon {
+          width: 24px;
+          height: 24px;
+        }
+  
+        .tags-container {
+          display: flex;
+          gap: 0.5rem;
+          margin-top: 20px;
+  
+          .tag {
+            background-color: #e0f7fa;
+            padding: 2px 8px;
+            border-radius: 5px;
+            color: #00796b;
+            font-weight: bold;
+            display: inline-block;
+            border: none;
+          }
+          .tag-role{
+            background-color: #ebbe5e;
+            padding: 2px 8px;
+            border-radius: 5px;
+            color: #f7f6f4c7;
+            font-weight: bold;
+            display: inline-block;
+            border: none;
+          }
+        }
+      }
+    }
+  
+    @media (max-width: 768px) {
+      .content {
+        flex: 1 1 calc(50% - 1rem); /* Dos tarjetas por fila en pantallas medianas */
+      }
+    }
+  
+    @media (max-width: 480px) {
+      .content {
+        flex: 1 1 100%; /* Una tarjeta por fila en pantallas pequeñas */
+      }
+    }
+  }

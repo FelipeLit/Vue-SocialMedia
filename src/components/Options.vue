@@ -2,53 +2,72 @@
   <div class="container-options">
     <div class="opt">
       <div>
-        <a class="option"
-          ><img
+        <button class="option img" @click="navigate('profile')">
+          <img
             src="../assets/images/usuario.png"
-            alt="usuario"
-            width="15px"
-            height="15px"
-            class="img"
+            alt="Profile icon"
+            width="15"
+            height="15"
           />
-          Profile</a
-        >
-        <a class="option"
-          ><img
+          Profile
+        </button>
+
+        <button class="option img" @click="navigate('team')">
+          <img
             src="../assets/images/team-building.png"
-            alt="usuario"
-            width="15px"
-            height="15px"
-            class="img"
+            alt="Team icon"
+            width="15"
+            height="15"
           />
-          Team</a
-        >
+          Team
+        </button>
       </div>
 
       <div class="opt-2">
-        <a class="option"
-          ><img
+        <button class="option img" @click="navigate('projects')">
+          <img
+            src="../assets/images/paleta-de-color.png"
+            alt="Projects icon"
+            width="15"
+            height="15"
+          />
+          Projects
+        </button>
+        <button class="option img" @click="navigate('connections')">
+          <img
             src="../assets/images/briefing.png"
-            alt="usuario"
-            width="15px"
-            height="15px"
-            class="img"
-          />Projects</a
-        >
-        <a class="option"
-          ><img
-            src="../assets/images/enlace.png"
-            alt="usuario"
-            width="15px"
-            height="15px"
-            class="img"
-          />Connections</a
-        >
+            alt="Profile icon"
+            width="15"
+            height="15"
+          />
+          Connections
+        </button>
       </div>
     </div>
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { ref } from "vue";
+
+const page = ref("PROFILE");
+
+import { useRouter } from "vue-router";
+
+const router = useRouter();
+
+function navigate(view: string) {
+  if (view === "profile") {
+    router.push("/profile");
+  } else if (view === "team") {
+    router.push("/team");
+  } else if (view === "projects") {
+    router.push("/projects");
+  } else if (view === "connections") {
+    router.push("/connections");
+  }
+}
+</script>
 
 <style lang="scss" scoped>
 .container-options {
@@ -67,23 +86,26 @@
 
   @media (max-width: 600px) {
     width: 100%;
-    flex-direction: column; /* Cambia a columna en móvil */
+    flex-direction: column;
   }
 }
 
 .opt-2 {
-  margin-top: 0; /* Estilo por defecto para escritorio */
+  margin-top: 0;
 
   @media (max-width: 600px) {
-    margin-top: 1.3rem; /* Espaciado adicional para móvil */
+    margin-top: 1.3rem;
   }
 }
 
 .option {
   cursor: pointer;
   padding: 1rem;
-  text-align: left; /* Estilo por defecto para escritorio */
-  width: auto; /* Restablece el ancho para escritorio */
+  text-align: left;
+  width: auto;
+  border: none;
+  border-radius: 10px;
+  margin-right: 2rem;
 
   &:hover {
     background-color: #9e59be;
@@ -92,8 +114,9 @@
   }
 
   @media (max-width: 600px) {
-    width: 100%; /* Aumenta el ancho en móvil */
-    text-align: center; /* Centra el texto en móvil */
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;
   }
 }
 </style>
